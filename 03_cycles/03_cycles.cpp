@@ -41,7 +41,7 @@ int main()
 			break;
 	}
 	cout << i << endl;*/
-	//for (size_t i = 1; i <= 20; i++)
+	//for (size_t i = 1; i <= 20; i+=1)
 	//{
 	//	if (i % 3 == 0)
 	//		continue;
@@ -80,7 +80,7 @@ int main()
 			system("color 05"); break;
 		}
 	} while (choice != 0);
-	
+	size_t i;
 
 
 }
