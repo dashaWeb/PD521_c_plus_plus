@@ -44,7 +44,7 @@ int main()
     // fill array
     for (size_t i = 0; i < SIZE; )
     {
-        int flag = true;
+        bool flag = true;
         int number = rand() % 10 + 1; // [1,10]
 
         for (size_t j = 0; j < i; j++)
@@ -67,4 +67,11 @@ int main()
         cout << arr2[i] << "\t";
     }
     cout << endl;
+
+
+    string colors[]{ "red","green","purple" };
+    for (size_t i = 0; i < 3; i++)
+    {
+        cout << colors[i] << endl;
+    }
 }
