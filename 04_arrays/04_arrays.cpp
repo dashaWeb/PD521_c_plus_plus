@@ -74,4 +74,53 @@ int main()
     {
         cout << colors[i] << endl;
     }
+   /* for (size_t i = 0; i < 3; i++)
+    {
+        cin >> colors[i];
+    }*/
+    /*double arr3[5];
+    for (size_t i = 0; i < 5; i++)
+    {
+        cout << "Enter value :: ";
+        cin >> arr3[i];
+    }*/
+
+
+
+    string months[]{"January","February","March","April" ,"May" ,"June" ,"July" ,"August" ,"September" ,"October","November","December"};
+    const int SIZE_2 = 12;
+    double price[SIZE_2]{};
+
+    for (size_t i = 0; i < SIZE_2; i++)
+    {
+        //cout << "Enter value ["<<months[i]<<"] :: ";
+        //cin >> price[i];
+        price[i] = rand() % 1000;
+    }
+
+    for (size_t i = 0; i < SIZE_2; i++)
+    {
+        cout << price[i] << "\t";
+    }cout << endl;
+
+    double max = price[0];
+    double min = price[0];
+    int index_min = 0;
+    int index_max = 0;
+    for (size_t i = 0; i < SIZE_2; i++)
+    {
+        if (max < price[i])
+        {
+            max = price[i];
+            index_max = i;
+        }
+            
+        if (min > price[i])
+        {
+            min = price[i];
+            index_min = i;
+        }
+    }
+    cout << "Min :: " << min  << "\t " << months[index_min] << endl;
+    cout << "Max :: " << max << "\t" << months[index_max] << endl;
 }
