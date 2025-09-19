@@ -57,7 +57,7 @@ int main()
 	//    }
 	//    cout << endl;
 	//}
-	const int block = 3, row = 3, col = 4;
+	/*const int block = 3, row = 3, col = 4;
 	int arr[block][row][col]{};
 	for (size_t i = 0; i < block; i++)
 	{
@@ -71,7 +71,7 @@ int main()
 			cout << endl;
 		}
 		cout << endl;
-	}
+	}*/
 
 	//int mas[][][]{
 	//	{
@@ -93,5 +93,44 @@ int main()
 	//	},
 
 	//}
+	const int row = 4, col = 5;
+
+	int arr[row][col]{};
+	// fill array
+	for (size_t j = 0; j < row; j++)
+	{
+		for (size_t i = 0; i < col; i++)
+		{
+			arr[j][i] = rand() % 5 + 1;
+		}
+	}
+
+	// print array
+	for (size_t j = 0; j < row; j++)
+	{
+		for (size_t i = 0; i < col; i++)
+		{
+			cout << arr[j][i] << "\t";
+		}
+		cout << endl;
+	}
+
+	int sum = 0;
+	int min = arr[0][0];
+	int max = arr[0][0];
+	for (size_t j = 0; j < row; j++)
+	{
+		for (size_t i = 0; i < col; i++)
+		{
+			sum = sum + arr[j][i];
+			if (max < arr[j][i]) max = arr[j][i];
+			if (min > arr[j][i]) min = arr[j][i];
+		}
+	}
+
+	cout << "Sum :: " << sum << endl;
+	cout << "Average :: " << (double)sum / (row * col) << endl;
+	cout << "Min :: " << min << endl;
+	cout << "Max :: " << max << endl;
 }
 

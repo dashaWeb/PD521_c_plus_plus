@@ -90,6 +90,15 @@ void printArray(T arr[], size_t length, string prompt = "")
 	cout << endl;
 }
 
+
+template <typename T>
+void fillValue(T arr[], size_t length, T value)
+{
+	for (size_t i = 0; i < length; i++)
+	{
+		arr[i] = value;
+	}
+}
 //void printArray(int arr[], size_t length, string prompt = "")
 //{
 //	cout << prompt << (prompt.size() == 0 ? "" : " :: \t");
@@ -159,5 +168,23 @@ int main()
 	char arr_char[SIZE];
 	fillArray(arr_char, SIZE, 97, 122);
 	printArray(arr_char, SIZE, "Print Array char");
+
+
+
+	cout << "Enter number :: ";
+	cin >> number;
+	fillValue(arr, SIZE, number);
+	printArray(arr, SIZE, "Print Array ");
+	
+	cout << endl;
+
+	fillValue(arr, SIZE, 9);
+	printArray(arr, SIZE, "Print Array ");
+
+	cout << endl;
+
+	fillValue(arr_char, SIZE, 'a');
+	printArray(arr_char, SIZE, "Print Array ");
+
 }
 
