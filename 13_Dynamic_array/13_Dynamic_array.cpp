@@ -1,0 +1,50 @@
+
+#include "library.h"
+#include <ctime>
+using namespace std;
+
+int main()
+{
+
+	// new 
+	// delete
+	srand(time(0));
+	/*int* ptr_int = new int;
+
+	int size;
+	cout << "Enter size array :: ";
+	cin >> size;
+	int* ptr = new int[size];
+
+
+	for (size_t i = 0; i < size; i++)
+	{
+		ptr[i] = rand() % 10 + 1;
+	}
+
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << ptr[i] << "\t";
+	}cout << endl;
+
+	delete [] ptr;*/
+
+	/*int i = 1;
+	while (true)
+	{
+		long long* ptr = new long long[1000000];
+		cout << "block #" << i++ << endl;
+	}*/
+
+	int size = 5;
+	int* arr = createArray(size);
+
+	fillArray(arr, size);
+	printArray(arr, size, "Print Array Create        ");
+
+	pushBack(arr, size, 33);
+
+	printArray(arr, size, "Print Array after pushBack");
+	cout << size << endl;
+}
+
