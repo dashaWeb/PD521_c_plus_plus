@@ -48,13 +48,26 @@ int main()
 	cout << size << endl;
 
 	cout << endl;
-
 	popFront(arr, size);
 	printArray(arr, size, "Print Array after popFront");
 
 	cout << endl;
 	insert(arr, size, 22, 2);
 	printArray(arr, size, "Print Array after insert  ");
+
+	cout << endl;
+	pushFront(arr, size, 777);
+	printArray(arr, size, "Print Array after pushFront");
+
+
+	cout << endl;
+	popBack(arr, size);
+	printArray(arr, size, "Print Array after popBack ");
+
+
+	cout << endl;
+	remove(arr, size, 2);
+	printArray(arr, size, "Print Array after remove  ");
 
 	/*deleteArray(arr);
 	if (arr != nullptr)

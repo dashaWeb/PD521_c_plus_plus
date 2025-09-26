@@ -31,7 +31,7 @@ void deleteArray(int*& arr)
 //Функція додавання елемента в кінець масиву.
 void pushBack(int*& arr, int& size, int value)
 {
-	int* tmp = new int[size + 1];
+	/*int* tmp = new int[size + 1];
 	for (size_t i = 0; i < size; i++)
 	{
 		tmp[i] = arr[i];
@@ -39,18 +39,46 @@ void pushBack(int*& arr, int& size, int value)
 	tmp[size] = value;
 	size++;
 	delete[]arr;
-	arr = tmp;
+	arr = tmp;*/
+	insert(arr, size, value, size);
+}
+
+void pushFront(int*& arr, int& size, int value)
+{
+	/*int* tmp = new int[size + 1];
+	tmp[0] = value;
+	for (size_t i = 0; i < size; i++)
+	{
+		tmp[i + 1] = arr[i];
+	}
+	size++;
+	delete[]arr;
+	arr = tmp;*/
+	insert(arr, size, value, 0);
 }
 
 void popFront(int*& arr, int& size)
 {
-	int* tmp = new int[--size];
+	/*int* tmp = new int[--size];
 	for (size_t i = 0; i < size; i++)
 	{
 		tmp[i] = arr[i + 1];
 	}
 	deleteArray(arr);
-	arr = tmp;
+	arr = tmp;*/
+	remove(arr, size, 0);
+}
+
+void popBack(int*& arr, int& size)
+{
+	/*int* tmp = new int[--size];
+	for (size_t i = 0; i < size; i++)
+	{
+		tmp[i] = arr[i];
+	}
+	deleteArray(arr);
+	arr = tmp;*/
+	remove(arr, size, size-1);
 }
 
 void insert(int*& arr, int& size, int value, int index)
@@ -72,4 +100,22 @@ void insert(int*& arr, int& size, int value, int index)
 	deleteArray(arr);
 	arr = tmp;
 
+}
+
+void remove(int*& arr, int& size, int index)
+{
+	if (index < 0 or index >= size)
+	{
+		cout << "Error Index"; return;
+	}
+	int* tmp = new int[--size];
+	for (size_t i = 0; i < size; i++)
+	{
+		if (i < index)
+			tmp[i] = arr[i];
+		else
+			tmp[i] = arr[i + 1];
+	}
+	deleteArray(arr);
+	arr = tmp;
 }

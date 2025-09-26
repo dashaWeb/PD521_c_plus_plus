@@ -16,7 +16,7 @@ using std::endl;
 //Функція додавання елемента на початок масиву. - 
 //Функція видалення елемента на початку масиву. +
 //Функція вставки елемента за вказаним індексом. + 
-//Функція видалення елемента за вказаним індексом.
+//Функція видалення елемента за вказаним індексом. - 
 
 int* createArray(size_t size);
 void fillArray(int* arr, size_t size, int min = 1, int max = 10);
@@ -25,11 +25,14 @@ void deleteArray(int* &arr);
 
 
 void pushBack(int*& arr, int& size, int value);
+void pushFront(int*& arr, int& size, int value);
 
 
 //Функція видалення елемента на початку масиву.
 void popFront(int*& arr, int& size);
+void popBack(int*& arr, int& size);
 
 
 //Функція вставки елемента за вказаним індексом.
 void insert(int*& arr, int& size, int value, int index);
+void remove(int*& arr, int& size, int index);
