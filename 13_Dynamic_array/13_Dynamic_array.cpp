@@ -46,5 +46,22 @@ int main()
 
 	printArray(arr, size, "Print Array after pushBack");
 	cout << size << endl;
+
+	cout << endl;
+
+	popFront(arr, size);
+	printArray(arr, size, "Print Array after popFront");
+
+	cout << endl;
+	insert(arr, size, 22, 2);
+	printArray(arr, size, "Print Array after insert  ");
+
+	/*deleteArray(arr);
+	if (arr != nullptr)
+		printArray(arr, size, "Print Array after delete  ");
+	else
+		cout << "Array is empty" << endl;*/
+
+
 }
 
