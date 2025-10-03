@@ -159,7 +159,7 @@ void removeColumn(T** arr, const int& row, int& col, const int& index)
 {
 	for (size_t i = 0; i < row; i++)
 	{
-		int col_ = col;
+	int col_ = col;
 		remove(arr[i], col_, index);
 	}
 	col--;
